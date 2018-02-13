@@ -249,6 +249,39 @@
         </article>
             
         <!--
+            ## Pagination ##
+
+            A responsive, usable, and flexible pagination.
+
+            The pagination component consists of several elements:
+
+              * `pagination-previous` and `pagination-next` for incremental navigation.
+              * `pagination-list` which displays page items:
+                * `pagination-link` for the page numbers.
+                * `pagination-ellipsis` for range separators.
+
+            Notable options:
+
+              * `is-rounded` modifier: show rounded pagination items.
+              * The pagination comes in 3 additional sizes.
+              * You can disable some links if they are not active, or change the amount of page numbers available.
+              * By default on tablet, the list is located on the left, and the previous/next buttons on the right. But you can change the order of these elements by using the `is-centered` and `is-right` modifiers. 
+        -->
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <a class="pagination-previous">Previous</a>
+            <a class="pagination-next">Next</a>
+            <ul class="pagination-list">
+                <li><a class="pagination-link" aria-label="Go to page 1">1</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a class="pagination-link" aria-label="Go to page 4">4</a></li>
+                <li><a class="pagination-link is-current" aria-label="Page 5" aria-current="page">5</a></li>
+                <li><a class="pagination-link" aria-label="Go to page 6">6</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a class="pagination-link" aria-label="Goto page 9">9</a></li>
+            </ul>
+        </nav>
+
+        <!--
             ## Footer ##
 
             A simple responsive footer which can include anything: lists, headings, columns, icons, buttons, etc. 
