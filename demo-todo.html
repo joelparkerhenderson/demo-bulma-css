@@ -1,0 +1,245 @@
+
+        <!--
+            ## Breadcrumb ##
+
+            A simple breadcrumb component to improve your navigation experience.
+
+              * The breadcrumb component only requires a .breadcrumb container and a ul list.
+              * The dividers are automatically created in the content of the ::before pseudo-element of li tags.
+              * You can inform the current page using the is-active modifier in a li tag. It will disable the navigation of inner links.
+
+            Options:
+
+              * For alternative alignments, use `is-centered` or `is-right` on the .breadcrumb container.
+              * For alternative separators, use `has-arrow-separator` `has-bullet-separator` `has-dot-separator` `has-succeeds-separator`.
+              * For alternative sizes, use `is-small` `is-medium` `is-large`.
+              * For adding icons, you can use any of the Font Awesome icons, or your own.
+              * For colors, see the Bulma documentation.
+        -->
+        <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Area 1</a></li>
+                <li><a href="#">Area 2</a></li>
+            </ul>
+        </nav>
+
+        <!--
+            ## Card ##
+
+            An all-around flexible and composable component.
+
+            The card component comprises several elements that you can mix and match:
+
+              * `card`: the main container
+                * `card-header`: a horizontal bar with a shadow
+                  * `card-header-title`: a left-aligned bold text
+                  * `card-header-icon`: a placeholder for an icon
+                * `card-image`: a fullwidth container for a responsive image
+                * `card-content`: a multi-purpose container for any other element
+                * `card-footer`: a horizontal list of controls
+                  * `card-footer-item`: a repeatable list item
+
+            Options:
+            
+                * To center the card-header-title,  append the `is-centered` modifier.
+        -->
+
+        <!-- `card`: the main card container -->
+        <div class="card">
+
+            <!-- `card-header`: a horizontal bar with a shadow -->
+            <header class="card-header">
+
+                <!-- `card-header-title`: a left-aligned bold text -->
+                <p class="card-header-title">
+                    Demo Card
+                </p>
+                <a href="#" class="card-header-icon" aria-label="more options">
+                    <span class="icon">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </a>
+        </header>
+
+                      
+            <!-- `card-image`: a fullwidth container for a responsive image -->
+            <div class="card-image">
+
+                <figure class="image is-4by3">
+                    <img src="demo-card-image.png" alt="Demo card image">
+                </figure>
+            </div>
+
+            <!-- `card-content`: a multi-purpose container for any other element -->
+            <div class="card-content">
+
+                <!-- Example layout: a thumbnail at left, and title/subtitle at right.  -->
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-48x48">
+                        <img src="demo-card-content-image.png" alt="Demo card content image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Title</p>
+                        <p class="subtitle is-6">Subtitle</p>
+                    </div>
+                </div>
+            
+                <!-- Example layout: some demo text  -->
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+            </div>
+
+            <!-- `card-footer`: a horizontal list of controls -->
+            <footer class="card-footer">
+
+                <!-- `card-footer-item`: a horizontal list item; you can use as many of these as you want -->
+                <p class="card-footer-item">Alpha</p>
+                <p class="card-footer-item">Bravo</p>
+                <p class="card-footer-item">Charlie</p>
+
+            </footer>
+
+        </div>
+
+        <!--
+            ## Columns ##
+
+            A simple way to build responsive columns.
+
+            To create columns:
+
+              * Add a columns container
+              * Add as many column elements as you want
+              * The default is each column has an equal width.
+              * There are many ways to customize the columns' widths, gaps, colors, etc.
+        -->
+        <div class="columns">
+            <div class="column">Column 1</div>
+            <div class="column">Column 2</div>
+            <div class="column">Column 3</div>
+        </div>
+
+        <!--
+            ## Footer ##
+
+            A simple responsive footer which can include anything: lists, headings, columns, icons, buttons, etc. 
+        -->
+        <footer class="footer">
+            <div class="container">
+
+                <!-- Example of how to center the text -->
+                <div class="content has-text-centered">
+                    This is the footer.
+                </div>
+
+            </div>
+        </footer>
+
+        <!--
+            ## Container ##
+
+            A simple container to center your content horizontally.
+
+            Notable options:
+
+              * `is-fluid` modifier: keep the margin on the left and right sides, on any viewport size. 
+              * `is-widescreen` and `is-fullhd`: use a fullwidth container until those specific breakpoints.
+        -->
+        <div class="container is-fluid">
+            <div class="notification">
+                This container is fluid. It has a 32px gap on either side, on any viewport size.
+            </div>
+        </div>
+
+        <!--
+            ## Messages ##
+            
+            Colored message blocks, to emphasize part of your page.
+
+            Notable options:
+
+              * For example, you can add a "dismiss" button icon.
+
+        -->
+        <article class="message">
+        <div class="message-header">
+            Message header
+        </div>
+        <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        </article>
+
+        <!--
+            ## Pagination ##
+
+            A responsive, usable, and flexible pagination.
+
+            The pagination component consists of several elements:
+
+              * `pagination-previous` and `pagination-next` for incremental navigation.
+              * `pagination-list` which displays page items:
+                * `pagination-link` for the page numbers.
+                * `pagination-ellipsis` for range separators.
+
+            Notable options:
+
+              * `is-rounded` modifier: show rounded pagination items.
+              * The pagination comes in 3 additional sizes.
+              * You can disable some links if they are not active, or change the amount of page numbers available.
+              * By default on tablet, the list is located on the left, and the previous/next buttons on the right. But you can change the order of these elements by using the `is-centered` and `is-right` modifiers. 
+        -->
+        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <a class="pagination-previous">Previous</a>
+            <a class="pagination-next">Next</a>
+            <ul class="pagination-list">
+                <li><a class="pagination-link" aria-label="Go to page 1">1</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a class="pagination-link" aria-label="Go to page 4">4</a></li>
+                <li><a class="pagination-link is-current" aria-label="Page 5" aria-current="page">5</a></li>
+                <li><a class="pagination-link" aria-label="Go to page 6">6</a></li>
+                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                <li><a class="pagination-link" aria-label="Goto page 9">9</a></li>
+            </ul>
+        </nav>
+
+        <!-- 
+            ## Tabs ##
+
+            Simple responsive horizontal navigation tabs, with different styles.
+
+              * Tabs only require a `tabs` container and a `<ul>` list.
+              * The default tabs style has a single border at the bottom.
+
+            Notable options:
+
+              * Alignment: To align the tabs list, use the `is-centered` or `is-right` modifier on the .tabs container.
+              * Icons: You can use any of the Font Awesome icons.
+              * Sizes: You can choose between 3 additional sizes.
+              * Borders: If you want a more classic style with borders, append the `is-boxed` modifier. 
+              * Radios: If you want mutually exclusive tabs (like radio buttons where clicking one deselects all other ones), use the `is-toggle` modifier. 
+              * Rounded: If you use both `is-toggle` and `is-toggle-rounded`, then the first and last items will be rounded.
+              * Width:  If you want the tabs to take up the whole width available, use the `is-fullwidth` modifier. 
+            -->
+        <div class="tabs is-centered">
+            <ul>
+                <li class="is-active"><a>Alpha</a></li>
+                <li><a>Bravo</a></li>
+                <li><a>Charlie</a></li>
+            </ul>
+        </div>
+
+        <!--
+            ## Icon ##
+
+            Bulma is compatible with all icon font libraries: Font Awesome, Material Design Icons, Open Iconic, Ionicons, etc. 
+        -->
+        <span class="icon has-text-info"><i class="fas fa-info-circle"></i></span>
+        <span class="icon has-text-success"><i class="fas fa-check-square"></i></span>
+        <span class="icon has-text-warning"><i class="fas fa-exclamation-triangle"></i></span>
+        <span class="icon has-text-danger"><i class="fas fa-ban"></i></span>
+
