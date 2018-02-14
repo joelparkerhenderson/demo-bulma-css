@@ -2,17 +2,39 @@
 
 This project demonstrates Bulma CSS features.
 
+Contents:
+* [Introduction](#introduction)
+* [Demos](#demos)
+* [Bulma capabilties](#bulma-capabilties)
+* [Bulma capabilities in detail](#bulma-capabilities-in-detail)
+* [Notable settings](#notable-settings)
+* [Tracking](#tracking)
+
+
+## Introduction
+
+This project demonstrates Bulma CSS features.
+
   * This demo uses many inline comments as helpful annotations.
   * This demo is available at https://github.com/joelparkerhenderson/demo_bulma_css
   * To learn about Bulma CSS see https://bulma.io 
 
-This demo uses these files:
 
-  * [demo.html](demo.html) - the main web page.
-  * [demo.js](demo.js) - typical code to show/hide navigation bar items.
-  * [demo-logo.png](demo-logo.png) - typical logo image suitable for the upper left of the navigation bar.
-  * [demo-card-image.png](demo-card.png) - typical picture image suitable for a card image component.
-  * [demo-card-content-image.png](demo-card-content-image.png) - typical thumbnail for a card content image component.
+## Demos
+
+This project uses these files:
+
+  * [head.html](demos/head.html) - the HTML head that loads Bulma files.
+  * [navbar.html](demos/navbar.html) and [navbar.js] - navigation bar with dropdown menus.
+  * [container.html](demos/container.html) - container for holding many kinds of elements.
+  * [icon.html](demos/icon.html) - icon examples using Font Awesome.
+  * [columns.html](demos/columns.html) - columns.
+  * [tabs.html](demos/tabs.html) - tabs for choosing one among multiple.
+  * [message.html](demos/message.html) - message for displaying information.
+  * [breadcrumb.html](demos/breadcrumb.html) - breadcrumb navigation.
+  * [card.html](demos/card.html) - card component for displaying an area.
+  * [pagination.html](demos/pagination.html) - pagination navigation.
+  * [footer.html](demos/footer.html) - footer for the bottom of a page.
 
 
 ## Bulma capabilties
@@ -27,7 +49,10 @@ Bulma capabilties at a glace:
   * Elements: box, button, content, delete, icon, image, notifications, progress bars, tables, tags, titles.
   * Components: breadcrumb, card, dropdown, menu, message, modal, navbar, pagination, panel, tabs.
 
-Bulma capabilties in more detail:
+
+## Bulma capabilities in detail
+
+Bulma capabilties in detail include:
 
   * Overview
     * Getting started: you only need 1 CSS file to use Bulma.
@@ -100,7 +125,7 @@ Container widths for various screen sizes are chosen to be divisible by both 12 
     * `fullhd`: maximum width of 1344px.
 
 
-## Tracking ##
+## Tracking
 
   * Package: demo_bulma_css
   * Version: 1.0.0

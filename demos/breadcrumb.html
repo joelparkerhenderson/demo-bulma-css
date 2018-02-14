@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo of Bulma CSS: navigation bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+  <body>
+
+    <!--
+      ## Breadcrumb ##
+
+      A simple breadcrumb component to improve your navigation experience.
+
+        * The breadcrumb component only requires a .breadcrumb container and a ul list.
+        * The dividers are automatically created in the content of the ::before pseudo-element of li tags.
+        * You can inform the current page using the is-active modifier in a li tag. It will disable the navigation of inner links.
+
+      Options:
+
+        * For alternative alignments, use `is-centered` or `is-right` on the .breadcrumb container.
+        * For alternative separators, use `has-arrow-separator` `has-bullet-separator` `has-dot-separator` `has-succeeds-separator`.
+        * For alternative sizes, use `is-small` `is-medium` `is-large`.
+        * For adding icons, you can use any of the Font Awesome icons, or your own.
+        * For colors, see the Bulma documentation.
+    -->
+    <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="#">Breadcrumb 1</a></li>
+        <li><a href="#">Breadcrumb 2</a></li>
+        <li><a href="#">Breadcrumb 3</a></li>
+      </ul>
+    </nav>
+
+  </body>
+</html>
