@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo of Bulma CSS: navigation bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+  <body>
+
+    <!--
+      ## Panel ##
+
+      The panel is container for several types:
+
+        * panel-heading as the first child
+        * panel-tabs for navigation
+        * panel-block which can contain other elements, like:
+          * control
+          * input
+          * button
+          * panel-icon
+
+      The panel-block can be an anchor tag <a> or a label <label> with a checkbox inside.
+        
+    -->
+    <nav class="panel">
+      <p class="panel-heading">
+        Demo Panel
+      </p>
+      <div class="panel-block">
+        <p class="control has-icons-left">
+          <input class="input is-small" type="text" placeholder="search">
+          <span class="icon is-small is-left">
+            <i class="fas fa-search"></i>
+          </span>
+        </p>
+      </div>
+      <p class="panel-tabs">
+        <a class="is-active">Alpha</a>
+        <a>Bravo</a>
+        <a>Charlie</a>
+      </p>
+      <a class="panel-block is-active">
+        Delta
+      </a>
+      <a class="panel-block">
+        Echo
+      </a>
+      <a class="panel-block">
+        Foxtrot
+      </a>
+      <div class="panel-block">
+        <button class="button is-link is-outlined is-fullwidth">
+          Golf
+        </button>
+      </div>
+    </nav>
+
+  </body>
+</html>

@@ -31,6 +31,7 @@ This project uses these files:
   * [columns.html](demos/columns.html) - columns.
   * [tabs.html](demos/tabs.html) - tabs for choosing one among multiple.
   * [message.html](demos/message.html) - message for displaying information.
+  * [panel.html](demos/panel.html) - panel for lists.
   * [breadcrumb.html](demos/breadcrumb.html) - breadcrumb navigation.
   * [card.html](demos/card.html) - card component for displaying an area.
   * [pagination.html](demos/pagination.html) - pagination navigation.
