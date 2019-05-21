@@ -17,7 +17,7 @@ This project demonstrates Bulma CSS features.
 
   * This demo uses many inline comments as helpful annotations.
   * This demo is available at https://github.com/joelparkerhenderson/demo_bulma_css
-  * To learn about Bulma CSS see https://bulma.io 
+  * To learn about Bulma CSS see https://bulma.io
 
 
 ## Demos
@@ -82,7 +82,7 @@ Bulma capabilties in detail include:
     * Media Object: The famous media object prevalent in social media interfaces, but useful in any context.
     * Hero: An imposing hero banner to showcase something.
     * Section: A simple container to divide your page into sections.
-    * Footer: A simple responsive footer which can include anything: lists, headings, columns, icons, buttons, etc. 
+    * Footer: A simple responsive footer which can include anything: lists, headings, columns, icons, buttons, etc.
     * Tiles: a single tile element to build 2-dimensional grid layouts.
   * Form
     * Form controls: All generic form controls, designed for consistency.
@@ -97,7 +97,7 @@ Bulma capabilties in detail include:
     * Button: The classic button, in different colors, sizes, and states.
     * Content: A single class to handle WYSIWYG generated content, where only HTML tags are available.
     * Delete: A versatile delete cross.
-    * Icon: Bulma is compatible with all icon font libraries: Font Awesome, Material Design Icons, etc. 
+    * Icon: Bulma is compatible with all icon font libraries: Font Awesome, Material Design Icons, etc.
     * Image: A container for responsive images.
     * Notifications: Bold notification blocks, to alert your users of something.
     * Progress bars: Native HTML progress bars.
