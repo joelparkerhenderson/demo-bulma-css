@@ -47,99 +47,99 @@
         <!-- `navbar-start` class is the left part of the menu, which appears next to the navbar brand on desktop. -->
         <div class="navbar-start">
 
+          <!--
+            ## Dropdown menu parent ##
+
+            To create a dropdown menu, you will need 4 elements:
+
+            * `navbar-item` class with the `has-dropdown` modifier; this is the parent of a dropdown menu.
+            * `is-hoverable`: the dropdown will show up when hovering the parent `navbar-item`.
+            * `is-active`: the dropdown will show up all the time.
+            * `is-right modifier`: position the dropdown to start from the right when `navbar-item` is on the right side.
+            * `navbar-link` which contains the dropdown arrow.
+            * `navbar-dropdown` which can contain instances of navbar-item and navbar-divider.
+          -->
+          <div class="navbar-item has-dropdown is-hoverable">
+
+            <!-- `navbar-link` class is a link as the first sibling of a dropdown, which shows the title and an arrow symbol. -->
+            <a class="navbar-link">Alpha</a>
+
             <!--
-              ## Dropdown menu parent ##
+              ## Dropdown ##
 
-              To create a dropdown menu, you will need 4 elements:
+              * `navbar-dropdown` class is the dropdown menu, which can include navbar items and dividers.
+              * `is-boxed` modifier is preferable to use when the navbar is transparent.
 
-              * `navbar-item` class with the `has-dropdown` modifier; this is the parent of a dropdown menu.
-              * `is-hoverable`: the dropdown will show up when hovering the parent `navbar-item`.
-              * `is-active`: the dropdown will show up all the time.
-              * `is-right modifier`: position the dropdown to start from the right when `navbar-item` is on the right side.
-              * `navbar-link` which contains the dropdown arrow.
-              * `navbar-dropdown` which can contain instances of navbar-item and navbar-divider.
+              By default, the dropdown style has:
+
+              * a grey border-top
+              * a border-radius at both bottom corners
+
+              When having a transparent navbar, it is preferable to use the boxed version of the dropdown, by using the `is-boxed` modifier:
+
+              * the grey border is removed
+              * a slight inner shadow is added
+              * all corners are rounded
+              * the hover/active state is animated
             -->
-            <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-dropdown is-boxed">
 
-              <!-- `navbar-link` class is a link as the first sibling of a dropdown, which shows the title and an arrow symbol. -->
-              <a class="navbar-link">Alpha</a>
+              <!-- Other navbar items; we use links, and you can use any div you want. -->
+              <a class="navbar-item" href="#">Alpha 1</a>
+              <a class="navbar-item" href="#">Alpha 2</a>
 
-              <!--
-                  ## Dropdown ##
+              <!-- `navbar-divider` class displays a horizontal rule in a navbar-dropdown. -->
+              <hr class="navbar-divider">
 
-                  * `navbar-dropdown` class is the dropdown menu, which can include navbar items and dividers.
-                  * `is-boxed` modifier is preferable to use when the navbar is transparent.
+              <a class="navbar-item" href="#">Alpha 3</a>
+              <a class="navbar-item" href="#">Alpha 3</a>
 
-                  By default, the dropdown style has:
-
-                  * a grey border-top
-                  * a border-radius at both bottom corners
-
-                  When having a transparent navbar, it is preferable to use the boxed version of the dropdown, by using the `is-boxed` modifier:
-
-                  * the grey border is removed
-                  * a slight inner shadow is added
-                  * all corners are rounded
-                  * the hover/active state is animated
-              -->
-              <div class="navbar-dropdown is-boxed">
-
-                <!-- Other navbar items; we use links, and you can use any div you want. -->
-                <a class="navbar-item" href="#">Alpha 1</a>
-                <a class="navbar-item" href="#">Alpha 2</a>
-
-                <!-- `navbar-divider` class displays a horizontal rule in a navbar-dropdown. -->
-                <hr class="navbar-divider">
-
-                <a class="navbar-item" href="#">Alpha 3</a>
-                <a class="navbar-item" href="#">Alpha 3</a>
-
-              </div>
-
-            </div>
-
-            <!-- Repeat the above "Alpha" dropdown a couple times, so the web page shows a couple more dropdowns. -->
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Bravo</a>
-                <div class="navbar-dropdown is-boxed">
-                    <a class="navbar-item" href="#">Bravo 1</a>
-                    <a class="navbar-item" href="#">Bravo 2</a>
-                    <hr class="navbar-divider">
-                    <a class="navbar-item" href="#">Bravo 3</a>
-                    <a class="navbar-item" href="#">Bravo 4</a>
-                </div>
-            </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">Charlie</a>
-              <div class="navbar-dropdown is-boxed">
-                <a class="navbar-item" href="#">Charlie 1</a>
-                <a class="navbar-item" href="#">Charlie 2</a>
-                <hr class="navbar-divider">
-                <a class="navbar-item" href="#">Charlie 3</a>
-                <a class="navbar-item" href="#">Charlie 4</a>
-              </div>
             </div>
 
           </div>
 
-          <!-- `navbar-end` class is the right part of the menu, which appears at the end of the navbar. -->
-          <div class="navbar-end">
+          <!-- Repeat the above "Alpha" dropdown a couple times, so the web page shows a couple more dropdowns. -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Bravo</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">Bravo 1</a>
+              <a class="navbar-item" href="#">Bravo 2</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="#">Bravo 3</a>
+              <a class="navbar-item" href="#">Bravo 4</a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Charlie</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">Charlie 1</a>
+              <a class="navbar-item" href="#">Charlie 2</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="#">Charlie 3</a>
+              <a class="navbar-item" href="#">Charlie 4</a>
+            </div>
+          </div>
 
-            <!-- Repeat the above "Alpha" dropdown, so the web page shows a dropdowns. -->
+        </div>
+
+        <!-- `navbar-end` class is the right part of the menu, which appears at the end of the navbar. -->
+        <div class="navbar-end">
+
+          <!-- Repeat the above "Alpha" dropdown, so the web page shows a dropdowns. -->
+          <div class="navbar-item has-dropdown is-hoverable">
             <div class="navbar-item has-dropdown is-hoverable">
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Right Side</a>
-                <div class="navbar-dropdown is-boxed">
-                  <a class="navbar-item" href="#">Right Side 1</a>
-                  <a class="navbar-item" href="#">Right Side 2</a>
-                  <hr class="navbar-divider">
-                  <a class="navbar-item" href="#">Right Side 3</a>
-                  <a class="navbar-item" href="#">Right Side 4</a>
-                </div>
+              <a class="navbar-link">Right Side</a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="#">Right Side 1</a>
+                <a class="navbar-item" href="#">Right Side 2</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="#">Right Side 3</a>
+                <a class="navbar-item" href="#">Right Side 4</a>
               </div>
             </div>
-
           </div>
+
+        </div>
 
       </div>
 
