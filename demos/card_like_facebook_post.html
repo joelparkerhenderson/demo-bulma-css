@@ -1,0 +1,98 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo of Bulma CSS: card like Facebook post</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+  <body>
+
+    <!--
+      ## Card like Facebook post ##
+
+      An all-around flexible and composable component,
+      stylized to look like a Facebook post in a news feed.
+
+      This card component comprises several elements that you can mix and match:
+
+        * `card`: the main container
+          * `card-image`: a fullwidth container for a responsive image
+          * `card-content`: a multi-purpose container for any other element
+          * `card-footer`: a horizontal list of controls
+            * `card-footer-item`: a repeatable list item
+
+      Options:
+      
+          * To center the card-header-title,  append the `is-centered` modifier.
+    -->
+
+    <!-- `card`: the main card container -->
+    <div class="card">
+                          
+        <!-- `card-content`: a multi-purpose container for any other element -->
+        <div class="card-content">
+
+            <!-- Example layout: a thumbnail at left, and title/subtitle at middle, and icon button at right.  -->
+            <div class="media">
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                        <img src="http://via.placeholder.com/48x48" alt="Demo card media object box image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-4">Title</p>
+                    <p class="subtitle is-6">Subtitle</p>
+                </div>
+                <div class="media-right">
+                    <button class="button">
+                        <span class="icon is-small"><i class="fas fa-chevron-circle-down"></i></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Example layout: some demo text  -->
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
+
+        </div>
+
+        <!-- `card-image`: a fullwidth container for a responsive image -->
+        <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="http://via.placeholder.com/400x300" alt="Demo card image" width="400" height="300">
+            </figure>
+        </div>
+  
+        <!-- `card-footer`: a horizontal list of controls -->
+        <footer class="card-footer">
+
+            <!-- `card-footer-item`: a horizontal list item; you can use as many of these as you want -->
+            <p class="card-footer-item">
+                <button class="button is-rounded">
+                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                    <span>Like</span>
+                </button>
+            </p>
+
+            <p class="card-footer-item">
+                <button class="button is-rounded">
+                    <span class="icon is-small"><i class="fas fa-comment"></i></span>
+                    <span>Comment</span>
+                </button>
+            </p>
+
+            <p class="card-footer-item">
+                <button class="button is-rounded">
+                    <span class="icon is-small"><i class="fas fa-share"></i></span>
+                    <span>Share</span>
+                </button>
+            </p>
+
+        </footer>
+
+    </div>
+
+  </body>
+</html>
