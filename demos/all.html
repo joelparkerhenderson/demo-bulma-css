@@ -1,0 +1,284 @@
+<!DOCTYPE>
+<!--
+    Demo of all our favorite Bulma aspects.
+
+    If you're reading this, and you're learning Bulma,
+    then you probably want to first read the individual
+    files in this same repository directory that are about
+    one topic each, such as a navbar, panel, tab, footer, etc.
+
+    This HTML demo also annotates typical web page features,
+    such as meta tags, that you may want to use on your own pages.
+-->
+<html>
+  <head>
+
+    <!-- Use UTF-8 character encoding. -->
+    <meta charset="utf-8">
+
+    <!-- Bulma needs a responsive viewport meta tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Use any title you want. -->
+    <title>Demo of Bulma CSS</title>
+
+    <!-- Use Bulma by fetching the file via CDN; if you prefer, you can download Bulma. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    
+    <!-- 
+      ## Navigation JavaScript ##
+      
+      The Bulma package does not come with any JavaScript.
+      Here is a demo implementation example, which toggles the navigation bar
+      class `is-active` on both the navbar-burger and the targeted navbar-menu. 
+    --> 
+    <script src="navbar.js"></script>
+
+    <!-- 
+      ## Font Awesome ##
+
+      We want to use Font Awesome icons with Bulma, so we load them here.
+      This is optional. Feel free to skip using icons, or to use your own.
+    -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js"></script>
+
+    <!--
+      ## X-UA-Compatible ##
+
+      Microsoft Internet Explorer compatibility tag. Microsoft writes:
+      If you are using the X-UA-Compatible META tag you want to place 
+      it as close to the top of the page's HEAD as possible. 
+      
+      Internet Explorer begins interpreting markup using the latest version. 
+      When Internet Explorer encounters the X-UA-Compatible META tag it 
+      starts over using the designated version's engine. This is a performance 
+      hit because the browser must stop and restart analyzing the content.
+
+      IE11 has made changes to these modes. Microsoft Edge, the browser that 
+      replaced IE11, only honors the tag in certain circumstances. 
+      
+      If you need to support IE9 or IE8, then we recommend using the tag. 
+      If you only support the latest browsers (IE11 and/or Edge) then 
+      consider dropping this tag altogether. If you use Twitter Bootstrap 
+      and need to eliminate validation warnings, this tag must appear in 
+      its specified order.
+    --> 
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!--
+      ## Theme color ##
+
+      Starting in version 39 of Chrome for Android on Lollipop, you'll now 
+      be able to use the theme-color meta tag to set the toolbar color.
+    -->
+    <meta name='theme-color' content='#aa1e1e'>
+
+    <!--
+      ## Application name ##
+
+      According to HTML5 LC, a meta tag with name=application-name shall have 
+      value (in the content attribute) that is “short free-form string giving 
+      the name of the Web application that the page represents”; if the page 
+      is not an application, such a tag must not be used. Browsers “may use 
+      the application name in UI in preference to the page's title, since the
+      title might include status messages and the like relevant to the status
+      of the page at a particular moment in time instead of just being the 
+      name of the application.
+    -->
+    <meta name="application-name" content="Demo App Name"/>
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="/cdn/bulma-extensions/bulma-tooltip/dist/css/bulma-tooltip.min.css">
+
+  </head>
+  <body>
+
+    <!-- 
+      ## Navigation bar ##
+
+      A responsive horizontal navbar that can support images, links, buttons, and dropdowns.
+
+        * `navbar` class is a responsive horizontal navbar that can support images, links, buttons, and dropdowns.
+        * `is-transparent` modifier removes any hover or active background from the navbar items, to enable seamless integration of the navbar in any visual context.
+        * `is-fixed-top` modifier keeps the navbar at the top of the page; this needs `has-navbar-fixed-top` too. 
+    -->
+    <nav class="navbar is-transparent" role="navigation" aria-label="Navigation bar">
+
+      <!-- 
+        ## Brand ##
+        
+        The `navbar-brand` class is the nav bar's left side, always visible.
+        This div usually contains the logo and optionally some links or icons. 
+      -->
+      <div class="navbar-brand">
+  
+        <!-- `navbar-item` class is each single item of the navbar, which can either be an a or a div. -->
+        <a class="navbar-item" href="http://www.joelparkerhenderson.com">
+
+          <!-- Our navbar brand has a first navbar item that is our logo and a link to our website. -->
+          <img src="demo-logo.png" alt="Logo" width="120" height="60">
+
+        </a>
+
+        <!-- `navbar-burger` class is the hamburger icon, which toggles the navbar menu on touch devices. -->
+        <button class="button navbar-burger"><span></span><span></span><span></span></button>
+  
+      </div>
+  
+      <!-- `navbar-menu` class is the right side, hidden on touch devices, visible on desktop -->
+      <div class="navbar-menu">
+
+        <!-- `navbar-start` class is the left part of the menu, which appears next to the navbar brand on desktop. -->
+        <div class="navbar-start">
+
+          <!--
+            ## Dropdown menu parent ##
+
+            To create a dropdown menu, you will need 4 elements:
+
+            * `navbar-item` class with the `has-dropdown` modifier; this is the parent of a dropdown menu.
+            * `is-hoverable`: the dropdown will show up when hovering the parent `navbar-item`.
+            * `is-active`: the dropdown will show up all the time.
+            * `is-right modifier`: position the dropdown to start from the right when `navbar-item` is on the right side.
+            * `navbar-link` which contains the dropdown arrow.
+            * `navbar-dropdown` which can contain instances of navbar-item and navbar-divider.
+          -->
+          <div class="navbar-item has-dropdown is-hoverable">
+
+            <!-- `navbar-link` class is a link as the first sibling of a dropdown, which shows the title and an arrow symbol. -->
+            <a class="navbar-link">Alpha</a>
+
+            <!--
+              ## Dropdown ##
+
+              * `navbar-dropdown` class is the dropdown menu, which can include navbar items and dividers.
+              * `is-boxed` modifier is preferable to use when the navbar is transparent.
+
+              By default, the dropdown style has:
+
+              * a grey border-top
+              * a border-radius at both bottom corners
+
+              When having a transparent navbar, it is preferable to use the boxed version of the dropdown, by using the `is-boxed` modifier:
+
+              * the grey border is removed
+              * a slight inner shadow is added
+              * all corners are rounded
+              * the hover/active state is animated
+            -->
+            <div class="navbar-dropdown is-boxed">
+
+              <!-- Other navbar items; we use links, and you can use any div you want. -->
+              <a class="navbar-item" href="#">Alpha 1</a>
+              <a class="navbar-item" href="#">Alpha 2</a>
+
+              <!-- `navbar-divider` class displays a horizontal rule in a navbar-dropdown. -->
+              <hr class="navbar-divider">
+
+              <a class="navbar-item" href="#">Alpha 3</a>
+              <a class="navbar-item" href="#">Alpha 3</a>
+
+            </div>
+
+          </div>
+
+          <!-- Repeat the above "Alpha" dropdown a couple times, so the web page shows a couple more dropdowns. -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Bravo</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">Bravo 1</a>
+              <a class="navbar-item" href="#">Bravo 2</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="#">Bravo 3</a>
+              <a class="navbar-item" href="#">Bravo 4</a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">Charlie</a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="#">Charlie 1</a>
+              <a class="navbar-item" href="#">Charlie 2</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="#">Charlie 3</a>
+              <a class="navbar-item" href="#">Charlie 4</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- `navbar-end` class is the right part of the menu, which appears at the end of the navbar. -->
+        <div class="navbar-end">
+
+          <!-- Repeat the above "Alpha" dropdown, so the web page shows a dropdowns. -->
+          <div class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Right Side</a>
+              <div class="navbar-dropdown is-boxed">
+                <a class="navbar-item" href="#">Right Side 1</a>
+                <a class="navbar-item" href="#">Right Side 2</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item" href="#">Right Side 3</a>
+                <a class="navbar-item" href="#">Right Side 4</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  
+    </nav>
+    
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Hello World
+        </h1>
+        <p class="subtitle">
+          My first website with <strong>Bulma</strong>!
+        </p>
+      </div>
+    </section>
+
+    <!--
+      ## Columns ##
+
+      A simple way to build responsive columns.
+
+      To create columns:
+
+        * Add a columns container
+        * Add as many column elements as you want
+        * The default is each column has an equal width.
+        * There are many ways to customize the columns' widths, gaps, colors, etc.
+    -->
+    <div class="columns">
+      <div class="column has-text-centered">Column 1</div>
+      <div class="column has-text-centered">Column 2</div>
+      <div class="column has-text-centered">Column 3</div>
+    </div>
+        
+    <!--
+      ## Footer ##
+
+      A simple responsive footer which can include anything: lists, headings, columns, icons, buttons, etc. 
+    -->
+    <footer class="footer">
+      <div class="container">
+
+        <!-- Example of how to center the text -->
+        <div class="content has-text-centered">
+          This is the footer.
+        </div>
+
+      </div>
+    </footer>
+  
+  </body>
+</html>
